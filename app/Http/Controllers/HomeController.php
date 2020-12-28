@@ -98,5 +98,12 @@ class HomeController extends Controller
 
     } 
 
+     public function logout()
+     {
+
+        return redirect()->route('login.user');
+    }
+
+
 
 }

@@ -103,4 +103,5 @@ class UsersController extends Controller
 
         return redirect()->route('admin.client.index');
     }
+
 }

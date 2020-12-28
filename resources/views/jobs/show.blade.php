@@ -25,7 +25,7 @@
             <h5>Job Nature: {{ $job->job_nature }}</h5>
             <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
             <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
-                <p> <span class="address">Drop Your CV: </span><a href="https://www.gmail.com/">{{$job->email}}</a></p>
+                <p> <span class="address">Drop Your CV: </span><a href="https://www.gmail.com/" target='_blank' >{{$job->email}}</a></p>
         </div>
     </div>	
     <div class="single-post job-details">

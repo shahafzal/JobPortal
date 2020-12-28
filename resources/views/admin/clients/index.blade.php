@@ -1,30 +1,29 @@
 @extends('layouts.admin')
 @section('content')
 
-
 <div class="card">
     <div class="card-header">
-        client list
+        Client list
     </div>
 
     <div class="card-body">
         <div class="table-responsive">
-            <table class=" table table-bordered table-striped table-hover datatable datatable-User">
+            <table class=" table table-bordered table-striped table-hover datatable datatable-Clients">
                 <thead>
                     <tr>
                         <th width="10">
 
                         </th>
                         <th>
-                                Client Id 
+                           Client Id
                         </th>
                         <th>
-                             Client Email
+                            Client Email
                         </th>
-                       
                         <th>
                             Delete
                         </th>
+                       
                         <th>
                             &nbsp;
                         </th>
@@ -37,22 +36,21 @@
 
                             </td>
                             <td>
-                                {{ $client->id }}
+                                {{ $client->id  }}
                             </td>
                           
                             <td>
-                                {{$client->email}}
+                                {{ $client->email }}
                             </td>
-                            
-                            
-                            <td>
-                                
-
-                                 <a href="{{ route('admin.client.delete', ['id' => $client->id ]) }}" class="btn btn-danger" onclick="return confirm('Are you sure?')">
-                                   Remove
-                               </a>
-
+                           
+                           
+                           <td>
+                                <a href="{{ route('admin.client.delete', ['id' => $client->id ]) }}" class="btn btn-xs btn-danger">
+                                    <!-- <span class="glyphicon glyphicon-trash"></span> -->
+                                    Remove
+                                </a>
                             </td>
+
 
                         </tr>
                     @endforeach

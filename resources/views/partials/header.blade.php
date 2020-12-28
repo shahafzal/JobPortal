@@ -4,6 +4,10 @@
           <div id="logo">
               <h2 class="leader">Job Portal</h2>    
           </div>
+          <div>
+             <li class="btn btn-logout"><a class="text-white" href="{{route('client.logout')}}">Logout</a></li>
+          </div>
+
         </div>
     </div>
 </header>
@@ -11,5 +15,10 @@
  .leader{
    font-Size:2rem;
    color:#fff
+ }
+ .btn-logout{
+ 	color:#fff;
+ 	background-color: #49e4fa;
+ 	
  }
 </style>

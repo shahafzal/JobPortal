@@ -36,6 +36,12 @@ Route::get('/',[
     'as'  =>'client.accessAccount'
   
   ]);
+   Route::get('/client/logout',[
+ 
+      'uses'=>'HomeController@logout',
+        
+      'as'  =>'client.logout'
+      ]);
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
@@ -61,19 +67,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
       'as'  =>'client.index'
     
     ]);
-    Route::get('/client/index',[
- 
-      'uses'=>'UsersController@clientIndex',
-        
-      'as'  =>'client.index'
     
-    ]);
     Route::get('/client/{id}/delete',[
  
       'uses'=>'UsersController@delete',
         
       'as'  =>'client.delete'
       ]);
+
+    
 
     // Categories
     Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');

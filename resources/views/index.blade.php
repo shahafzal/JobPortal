@@ -73,12 +73,12 @@
                 </p>
                 <h5>Job Nature: {{ $job->job_nature }}</h5>
                 <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
-                <p class="address"><span class="lnr lnr>-database"></span> {{ $job->salary }}</p>
-                <p> <span class="address">Drop Your CV: </span><a href="https://www.gmail.com/">{{$job->email}}</a></p>
+                <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
+                <p> <span class="address">Drop Your CV: </span><a href="https://www.gmail.com/ "  target='_blank'>{{$job->email}}</a></p>
             </div>
         </div>
     @endforeach
 
-    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
+    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }} ">Load More Job Posts</a>
 </div>	
 @endsection
