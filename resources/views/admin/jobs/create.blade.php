@@ -71,16 +71,14 @@
                 </p>
             </div>
             <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                <label for="email">{{ trans('cruds.job.fields.email') }}</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" class="form-control ">{{ old('email', isset($job) ? $job->email : '') }}</input>
                 @if($errors->has('email'))
                     <em class="invalid-feedback">
                         {{ $errors->first('email') }}
                     </em>
                 @endif
-                <p class="helper-block">
-                    {{ trans('cruds.job.fields.email_helper') }}
-                </p>
+                
             </div>
             <div class="form-group {{ $errors->has('job_nature') ? 'has-error' : '' }}">
                 <label for="job_nature">{{ trans('cruds.job.fields.job_nature') }}</label>
